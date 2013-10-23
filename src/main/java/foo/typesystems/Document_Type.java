@@ -1,4 +1,3 @@
-
 /* First created by JCasGen Fri Oct 11 01:58:03 EDT 2013 */
 package foo.typesystems;
 
@@ -14,14 +13,14 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Fri Oct 11 01:58:03 EDT 2013
+ * Updated by JCasGen Sun Oct 20 19:40:46 EDT 2013
  * @generated */
 public class Document_Type extends Annotation_Type {
-  /** @generated */
-  @Override
-  protected FSGenerator getFSGenerator() {return fsGenerator;}
-  /** @generated */
-  private final FSGenerator fsGenerator = 
+	/** @generated */
+	@Override
+	protected FSGenerator getFSGenerator() {return fsGenerator;}
+	/** @generated */
+	private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
   			 if (Document_Type.this.useExistingInstance) {
@@ -36,80 +35,86 @@ public class Document_Type extends Annotation_Type {
         } else return new Document(addr, Document_Type.this);
   	  }
     };
-  /** @generated */
-  @SuppressWarnings ("hiding")
-  public final static int typeIndexID = Document.typeIndexID;
-  /** @generated 
-     @modifiable */
-  @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("foo.typesystems.Document");
- 
-  /** @generated */
-  final Feature casFeat_relevanceValue;
-  /** @generated */
-  final int     casFeatCode_relevanceValue;
-  /** @generated */ 
-  public int getRelevanceValue(int addr) {
+	/** @generated */
+	@SuppressWarnings("hiding")
+	public final static int typeIndexID = Document.typeIndexID;
+	/**
+	 * @generated
+	 * @modifiable
+	 */
+	@SuppressWarnings("hiding")
+	public final static boolean featOkTst = JCasRegistry.getFeatOkTst("foo.typesystems.Document");
+
+	/** @generated */
+	final Feature casFeat_relevanceValue;
+	/** @generated */
+	final int casFeatCode_relevanceValue;
+
+	/** @generated */
+	public int getRelevanceValue(int addr) {
         if (featOkTst && casFeat_relevanceValue == null)
       jcas.throwFeatMissing("relevanceValue", "foo.typesystems.Document");
     return ll_cas.ll_getIntValue(addr, casFeatCode_relevanceValue);
   }
-  /** @generated */    
-  public void setRelevanceValue(int addr, int v) {
+	/** @generated */
+	public void setRelevanceValue(int addr, int v) {
         if (featOkTst && casFeat_relevanceValue == null)
       jcas.throwFeatMissing("relevanceValue", "foo.typesystems.Document");
     ll_cas.ll_setIntValue(addr, casFeatCode_relevanceValue, v);}
     
   
  
-  /** @generated */
-  final Feature casFeat_queryID;
-  /** @generated */
-  final int     casFeatCode_queryID;
-  /** @generated */ 
-  public int getQueryID(int addr) {
+	/** @generated */
+	final Feature casFeat_queryID;
+	/** @generated */
+	final int casFeatCode_queryID;
+
+	/** @generated */
+	public int getQueryID(int addr) {
         if (featOkTst && casFeat_queryID == null)
       jcas.throwFeatMissing("queryID", "foo.typesystems.Document");
     return ll_cas.ll_getIntValue(addr, casFeatCode_queryID);
   }
-  /** @generated */    
-  public void setQueryID(int addr, int v) {
+	/** @generated */
+	public void setQueryID(int addr, int v) {
         if (featOkTst && casFeat_queryID == null)
       jcas.throwFeatMissing("queryID", "foo.typesystems.Document");
     ll_cas.ll_setIntValue(addr, casFeatCode_queryID, v);}
     
   
  
-  /** @generated */
-  final Feature casFeat_text;
-  /** @generated */
-  final int     casFeatCode_text;
-  /** @generated */ 
-  public String getText(int addr) {
+	/** @generated */
+	final Feature casFeat_text;
+	/** @generated */
+	final int casFeatCode_text;
+
+	/** @generated */
+	public String getText(int addr) {
         if (featOkTst && casFeat_text == null)
       jcas.throwFeatMissing("text", "foo.typesystems.Document");
     return ll_cas.ll_getStringValue(addr, casFeatCode_text);
   }
-  /** @generated */    
-  public void setText(int addr, String v) {
+	/** @generated */
+	public void setText(int addr, String v) {
         if (featOkTst && casFeat_text == null)
       jcas.throwFeatMissing("text", "foo.typesystems.Document");
     ll_cas.ll_setStringValue(addr, casFeatCode_text, v);}
     
   
  
-  /** @generated */
-  final Feature casFeat_tokenList;
-  /** @generated */
-  final int     casFeatCode_tokenList;
-  /** @generated */ 
-  public int getTokenList(int addr) {
+	/** @generated */
+	final Feature casFeat_tokenList;
+	/** @generated */
+	final int casFeatCode_tokenList;
+
+	/** @generated */
+	public int getTokenList(int addr) {
         if (featOkTst && casFeat_tokenList == null)
       jcas.throwFeatMissing("tokenList", "foo.typesystems.Document");
     return ll_cas.ll_getRefValue(addr, casFeatCode_tokenList);
   }
-  /** @generated */    
-  public void setTokenList(int addr, int v) {
+	/** @generated */
+	public void setTokenList(int addr, int v) {
         if (featOkTst && casFeat_tokenList == null)
       jcas.throwFeatMissing("tokenList", "foo.typesystems.Document");
     ll_cas.ll_setRefValue(addr, casFeatCode_tokenList, v);}
@@ -118,9 +123,12 @@ public class Document_Type extends Annotation_Type {
 
 
 
-  /** initialize variables to correspond with Cas Type and Features
-	* @generated */
-  public Document_Type(JCas jcas, Type casType) {
+	/**
+	 * initialize variables to correspond with Cas Type and Features
+	 * 
+	 * @generated
+	 */
+	public Document_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 
@@ -142,7 +150,3 @@ public class Document_Type extends Annotation_Type {
 
   }
 }
-
-
-
-    

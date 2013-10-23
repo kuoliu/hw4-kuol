@@ -1,4 +1,3 @@
-
 /* First created by JCasGen Fri Oct 11 01:58:03 EDT 2013 */
 package foo.typesystems;
 
@@ -14,14 +13,14 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Fri Oct 11 01:58:03 EDT 2013
+ * Updated by JCasGen Sun Oct 20 19:40:46 EDT 2013
  * @generated */
 public class Token_Type extends Annotation_Type {
-  /** @generated */
-  @Override
-  protected FSGenerator getFSGenerator() {return fsGenerator;}
-  /** @generated */
-  private final FSGenerator fsGenerator = 
+	/** @generated */
+	@Override
+	protected FSGenerator getFSGenerator() {return fsGenerator;}
+	/** @generated */
+	private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
   			 if (Token_Type.this.useExistingInstance) {
@@ -36,44 +35,48 @@ public class Token_Type extends Annotation_Type {
         } else return new Token(addr, Token_Type.this);
   	  }
     };
-  /** @generated */
-  @SuppressWarnings ("hiding")
-  public final static int typeIndexID = Token.typeIndexID;
-  /** @generated 
-     @modifiable */
-  @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("foo.typesystems.Token");
- 
-  /** @generated */
-  final Feature casFeat_text;
-  /** @generated */
-  final int     casFeatCode_text;
-  /** @generated */ 
-  public String getText(int addr) {
+	/** @generated */
+	@SuppressWarnings("hiding")
+	public final static int typeIndexID = Token.typeIndexID;
+	/**
+	 * @generated
+	 * @modifiable
+	 */
+	@SuppressWarnings("hiding")
+	public final static boolean featOkTst = JCasRegistry.getFeatOkTst("foo.typesystems.Token");
+
+	/** @generated */
+	final Feature casFeat_text;
+	/** @generated */
+	final int casFeatCode_text;
+
+	/** @generated */
+	public String getText(int addr) {
         if (featOkTst && casFeat_text == null)
       jcas.throwFeatMissing("text", "foo.typesystems.Token");
     return ll_cas.ll_getStringValue(addr, casFeatCode_text);
   }
-  /** @generated */    
-  public void setText(int addr, String v) {
+	/** @generated */
+	public void setText(int addr, String v) {
         if (featOkTst && casFeat_text == null)
       jcas.throwFeatMissing("text", "foo.typesystems.Token");
     ll_cas.ll_setStringValue(addr, casFeatCode_text, v);}
     
   
  
-  /** @generated */
-  final Feature casFeat_frequency;
-  /** @generated */
-  final int     casFeatCode_frequency;
-  /** @generated */ 
-  public int getFrequency(int addr) {
+	/** @generated */
+	final Feature casFeat_frequency;
+	/** @generated */
+	final int casFeatCode_frequency;
+
+	/** @generated */
+	public int getFrequency(int addr) {
         if (featOkTst && casFeat_frequency == null)
       jcas.throwFeatMissing("frequency", "foo.typesystems.Token");
     return ll_cas.ll_getIntValue(addr, casFeatCode_frequency);
   }
-  /** @generated */    
-  public void setFrequency(int addr, int v) {
+	/** @generated */
+	public void setFrequency(int addr, int v) {
         if (featOkTst && casFeat_frequency == null)
       jcas.throwFeatMissing("frequency", "foo.typesystems.Token");
     ll_cas.ll_setIntValue(addr, casFeatCode_frequency, v);}
@@ -82,9 +85,12 @@ public class Token_Type extends Annotation_Type {
 
 
 
-  /** initialize variables to correspond with Cas Type and Features
-	* @generated */
-  public Token_Type(JCas jcas, Type casType) {
+	/**
+	 * initialize variables to correspond with Cas Type and Features
+	 * 
+	 * @generated
+	 */
+	public Token_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 
@@ -98,7 +104,3 @@ public class Token_Type extends Annotation_Type {
 
   }
 }
-
-
-
-    
