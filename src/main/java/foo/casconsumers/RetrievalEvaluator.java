@@ -128,7 +128,7 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
 				HashMap<String, Integer> query = this.queryTermVector.get(id);
 				sim = computeCosineSimilarity(query, termVec);
 				//sim += computeDiceCoefficient(query, termVec);
-				sim += computeJaccardCoefficient(query, termVec);
+				//sim += computeJaccardCoefficient(query, termVec);
 				//System.out.println(sim + "\t" + rel);
 
 				if (rel == 1) {
