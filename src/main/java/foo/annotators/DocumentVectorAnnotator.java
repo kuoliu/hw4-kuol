@@ -42,7 +42,7 @@ public class DocumentVectorAnnotator extends JCasAnnotator_ImplBase {
 		HashMap<String, Integer> termFre = new HashMap<String, Integer>();
 		
 		//TO DO: construct a vector of tokens and update the tokenList in CAS
-		String[] terms = docText.split("\\s+");
+		String[] terms = docText.split("(\\s+)|(\\s*,\\s*)|(\\s*;\\s*)");
 		if(terms.length == 0){
 			doc.setTokenList(new EmptyFSList(jcas));
 			return;
@@ -58,6 +58,15 @@ public class DocumentVectorAnnotator extends JCasAnnotator_ImplBase {
 						termFre.put("best", fre);
 					}else{
 						termFre.put("best", 1);
+					}
+					continue;
+				}else if(str.equals("friends")){
+					if(termFre.containsKey("friend")){
+						int fre = termFre.get("friend");
+						++ fre;
+						termFre.put("friend", fre);
+					}else{
+						termFre.put("friend", 1);
 					}
 					continue;
 				}
